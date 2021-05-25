@@ -3,23 +3,26 @@
     <div class="background">
       <Background />
     </div>
-
     <div class="content">
-      <div class="container">
-        <div class="main">
-          <Intro class="mt-10"/>
+      <div>
+          <Intro />
         </div>
+
+      <div class="">
+        <Footer />
       </div>
-      </div>
-  </div>
+    </div>
+    </div>
 </template>
 
 <script>
 import Background from "../layouts/background"
 import Intro from "../components/home/intro"
+import Footer from "../layouts/footer"
+
 export default {
   components: {
-    Background, Intro
+    Background, Intro, Footer
   }
 }
 </script>
@@ -33,6 +36,7 @@ export default {
   align-content: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .item-a {
@@ -52,6 +56,17 @@ export default {
   grid-area: section;
 }
 
+.content {
+  margin: 0 auto;
+  padding: 0px;
+  width: 100vw;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
 .container {
   max-width: 1600px;
   margin: 0 auto !important;
@@ -62,6 +77,7 @@ export default {
     ". main sidebar ."
     ". section section ."
 }
+
 
 @media screen and (max-width: 780px) {
   .container {

@@ -1,11 +1,10 @@
 <template>
-  <v-app dark>
+  <v-app class="relative" :class="this.$vuetify.theme.dark ? 'darkTheme' : 'lightTheme' ">
     <v-app-bar
       :clipped-left="clipped"
       fixed
       app
-      elevation="0"
-      flat
+      elevate-on-scroll
       
     >
       <div role="button" class="siteTitle" @click="push('/')">
@@ -64,17 +63,16 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-footer
-      :absolute="fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+
   </v-app>
 </template>
 
 <script>
+
+import Footer from "../layouts/footer"
+
 export default {
+  components: { Footer },
   data () {
     return {
       clipped: false,
@@ -147,20 +145,82 @@ export default {
     eraseCookie(name) {   
         document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     }
-  }
+  },
+  computed: {
+    localAttrs () {
+      const attrs = {}
+
+      if (this.variant === 'default') {
+        attrs.absolute = false
+        attrs.fixed = false
+      } else {
+        attrs[this.variant] = true
+      }
+      return attrs
+    },
+  },
 }
 </script>
 
-<style>
+<style lang="scss">
 
   :root {
     --materialBlue: #5472d3
   }
+  
+  .darkTheme {
+    p {
+      transition: 1s;
+      color: rgb(202, 202, 202);
+    }
+    .default-card{
+      background-color: rgb(44, 44, 44);
+      padding: 10px;
+    }
+    .default-shadow{
+      -webkit-box-shadow: 6px 34px 55px -11px rgb(17, 17, 17);
+      -moz-box-shadow: 6px 34px 55px -11px rgb(17, 17, 17);
+      box-shadow: 6px 34px 55px -11px rgb(17, 17, 17);
+    }
+  }
+
+  .lightTheme {
+    p {
+      transition: 1s;
+      color: rgb(88, 88, 88);
+    }
+    .default-card{
+      background-color: rgb(255, 255, 255);
+      padding: 10px;
+    }
+    .default-shadow{
+      -webkit-box-shadow: 6px 34px 55px -11px rgb(17, 17, 17);
+      -moz-box-shadow: 6px 34px 55px -11px rgb(17, 17, 17);
+      box-shadow: 6px 34px 55px -11px rgba(197, 197, 197, 0.5);
+    }
+  }
+
+  .relative {
+    position: relative;
+  }
 
   .background {
     position: relative;
-    
+    .default-card{
+      background-color: rgb(255, 255, 255);
+    }
   }
+
+  hr {
+    border-color: rgba(179, 179, 179, 0.3);
+  }
+
+  .footer {
+    grid-area: footer;
+    position: absolute;
+    bottom: 0;
+  }
+
   .content {
     position: absolute;
     top: 0;
@@ -172,6 +232,10 @@ export default {
     font-weight: bold;
     font-size: 28px;
     text-decoration: none;
+  }
+
+  p {
+    color: hsla(0, 0%, 45%, 0.822);
   }
 
 

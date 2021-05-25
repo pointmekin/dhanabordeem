@@ -1,10 +1,14 @@
-
-.container {
-  position: absolute;
+.page-container {
+  margin: 0 auto;
+  max-width: 1600px;
+  justify-content: center;
+  align-items: center;
 }
 
+
 .sidebar {
-  margin-top: 100px;
+  margin-top: 200px;
+  margin-bottom: 100px;
   margin-left: 10rem;
   overflow: hidden;
   height: 520px;
@@ -24,10 +28,20 @@
   transform: translate(-50%, -50%);
 }
 
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-50);
+  }
+}
+
 .profile-img {
   -webkit-box-shadow: 6px 34px 55px -11px rgba(189,189,189,1);
   -moz-box-shadow: 6px 34px 55px -11px rgba(189,189,189,1);
   box-shadow: 6px 34px 55px -11px rgba(189,189,189,1);
+  animation: 1.2s ease 0s 1 slideInFromBottom;
 }
 
 .fixed {
@@ -52,7 +66,7 @@
 }
 
 .greetings {
-  margin-top: 100px;
+  margin-top: 200px;
   font-size: 1.5rem;
 }
 .name {
@@ -186,6 +200,21 @@ a:hover:after {
   position: relative;
 }
 
+.logo {
+  height: 38px;
+  width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.logo img {
+  margin: 0 auto;
+}
+
 
 @media screen and (max-width: 780px) {
   .greetings {
@@ -213,9 +242,16 @@ a:hover:after {
 
   .sidebar {
     margin-top: 20px;
+    margin-bottom: 0;
   }
 
   .greetings {
     margin-top: 20px;
+    margin-bottom: 0;
   }
+
+  .section-divider {
+    height: 300px;
+  }
+  
 }  

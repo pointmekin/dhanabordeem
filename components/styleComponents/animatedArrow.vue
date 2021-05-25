@@ -46,7 +46,7 @@ export default {
 
 @media screen and (max-width: 780px) {
   .arrow {
-    top: 25%;
+    top: 50%;
   }
 }
 
