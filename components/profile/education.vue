@@ -9,22 +9,22 @@
           data-aos="fade-up"
           data-aos-delay="300"
           data-aos-duration="1000" 
-          v-for="(education, index) in educations"
+          v-for="(edu, index) in educations"
           :key="index"
           cols="12"
           md="6"
           sm="6"
         >
-          <div class="education-content default-card default-shadow">
+          <div class="edu-content default-card default-shadow">
             <div class="d-flex justify-space-between">
               <div>
-                <h3>{{ education.title }}</h3>
-                <p>{{ education.subtitle }}</p>
-                <p class="education-description">{{ education.description }}</p>
+                <v-card-title>{{ edu.title }}</v-card-title>
+                <v-card-subtitle>{{ edu.date }}</v-card-subtitle>
+                <v-card-text>{{ edu.subtitle }}</v-card-text>
+                <v-card-text class="edu-description">{{ edu.description }}</v-card-text>
               </div>
-              <div class="ml-3 " >
-                <p class="ml-2">{{ education.date }}</p>
-                <img class="d-flex float-right institution-logo" :src="education.img"  alt="">
+              <div class="ml-5 mr-3 mt-5" >
+                <img class="d-flex float-right institution-logo" :src="edu.img"  alt="">
               </div>
             </div>
           </div>
@@ -140,6 +140,8 @@ export default {
 .institution-logo {
   height: 50px;
 }
+
+
 
 @media screen and (max-width: 780px) {
   .sidebar {

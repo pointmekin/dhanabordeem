@@ -17,11 +17,11 @@
         >
           <div class="experience-content default-card default-shadow">
             <div class="d-flex justify-space-between">
-              <h3>{{ experience.title }}</h3>
-              <p>{{ experience.date }}</p>
+              <v-card-title>{{ experience.title }}</v-card-title>
+              <p class="mt-5 mr-3">{{ experience.date }}</p>
             </div>
-            <p>{{ experience.subtitle }}</p>
-            <p class="experience-description">{{ experience.description }}</p>
+            <v-card-subtitle class="pt-0">{{ experience.subtitle }}</v-card-subtitle>
+            <v-card-text class="experience-description">{{ experience.description }}</v-card-text>
           </div>
         </v-col>
       </v-row>
@@ -123,8 +123,8 @@ export default {
   text-align: center;
   box-sizing: border-box;
   height: 100%;
-  padding: 20px;
   text-align: left;
+
 }
 
 .experience-content p {

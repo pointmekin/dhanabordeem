@@ -65,34 +65,30 @@
         </div>
         <p class="subtitle">SKILLS</p>
         <div 
-          class="skills-section" 
+
           data-aos="fade-up"
           data-aos-delay="300"
-          data-aos-duration="600" 
+          data-aos-duration="600"
         >
-          <v-toolbar-title class="section skill-title">Technical Skills</v-toolbar-title>
-          <div  class="flexbox skill">
-            <div v-for="skill in technicalSkills" :key="skill" class="item">
-              <div class="skill-content">
-                <p>{{skill}}</p>
+          <div class="skills-section">
+            <v-toolbar-title class="section skill-title">Technical Skills</v-toolbar-title>
+            <div  class="flexbox skill">
+              <div v-for="(skill, i) in technicalSkills" :key="i" class="item">
+                <div class="skill-content">
+                  <p>{{skill}}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div 
-          class="skills-section mt-10" 
-          data-aos="fade-up"
-          data-aos-delay="300"
-          data-aos-duration="600" 
-        >
-          <v-toolbar-title class="section skill-title">Soft Skills</v-toolbar-title>
-          <div  class="flexbox skill">
-            <div v-for="skill in technicalSkills" :key="skill" class="item">
-              <div class="skill-content">
-                <p>{{skill}}</p>
+          <div class="skills-section">
+            <v-toolbar-title class="section skill-title">Technical Skills</v-toolbar-title>
+            <div  class="flexbox skill">
+              <div v-for="(skill, i) in technicalSkills" :key="i" class="item">
+                <div class="skill-content">
+                  <p>{{skill}}</p>
+                </div>
               </div>
-            </div> 
+            </div>
           </div>
         </div>
 
@@ -199,7 +195,6 @@
 import BouncingArrow from "../../components/styleComponents/animatedArrow"
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-
 
 
 export default {

@@ -7,10 +7,7 @@
     <h3 class="my-3">Technical Skills</h3>
     </div>
     <div 
-      class="skill-column-1" 
-      data-aos="fade-up"
-      data-aos-delay="300"
-      data-aos-duration="1000" 
+      class="skill-column-1"
     >
 <!-- FRONT-END SKILLS -->
       <div>
@@ -19,14 +16,14 @@
             cols="11"
           >
             <v-sheet
-              class="default-shadow"
+              class="default-shadow default-card"
               rounded="sm"
             >
               <v-sheet
                 class="pa-1 pl-2 primary text-left"
                 dense
                 rounded="t-sm"
-                color="grey lighten-3"
+                color="blue lighten-2"
               >
                 Front-end Development
               </v-sheet>
@@ -58,14 +55,14 @@
             cols="11"
           >
             <v-sheet
-              class="default-shadow"
+              class="default-shadow default-card"
               rounded="sm"
             >
               <v-sheet
                 class="pa-1 pl-2 primary text-left"
                 dense
                 rounded="t-sm"
-                color="grey lighten-3"
+                color="blue lighten-2"
               >
                 Back-end Development and Other
               </v-sheet>
@@ -91,9 +88,6 @@
     </div>
     <div 
       class="skill-column-2" 
-      data-aos="fade-up"
-      data-aos-delay="300"
-      data-aos-duration="1000" 
     >
 <!-- DESIGN SKILLS -->
       <div>
@@ -102,14 +96,14 @@
             cols="11"
           >
             <v-sheet
-              class="default-shadow"
+              class="default-shadow default-card"
               rounded="sm"
             >
               <v-sheet
                 class="pa-1 pl-2 primary text-left"
                 dense
                 rounded="t-sm"
-                color="grey lighten-3"
+                color="blue lighten-2"
               >
                 UI/UX Design
               </v-sheet>
@@ -133,21 +127,21 @@
           </v-col>
         </v-row>
       </div>
-<!-- DESIGN SKILLS -->
+<!-- PHOTO AND VIDEO SKILLS -->
       <div class="mt-3">
         <v-row justify="center">
           <v-col
             cols="11"
           >
             <v-sheet
-              class="default-shadow"
+              class="default-shadow default-card"
               rounded="sm"
             >
               <v-sheet
                 class="pa-1 pl-2 primary text-left"
                 dense
                 rounded="t-sm"
-                color="grey lighten-3"
+                color="blue lighten-2"
               >
                 Photo and Video
               </v-sheet>
@@ -176,9 +170,6 @@
       <h3 class="my-3 mt-8">Soft Skills</h3>
       <div 
         class="mt-3"
-        data-aos="fade-up"
-        data-aos-delay="300"
-        data-aos-duration="1000" 
       >
         <v-row justify="center">
           <v-col
@@ -186,14 +177,14 @@
             class="px-8"
           >
             <v-sheet
-              class="default-shadow"
+              class="default-shadow default-card"
               rounded="sm"
             >
               <v-sheet
-                class="pa-1 pl-2 primary text-left"
+                class="pa-1 pl-2 primary text-left invert-text-color"
                 dense
                 rounded="t-sm"
-                color="grey lighten-3"
+                color="blue lighten-2"
               >
                 Photo and Video
               </v-sheet>
@@ -359,16 +350,30 @@ export default {
   height: 50px;
 }
 
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(-50);
+  }
+}
+
 .skill-column-1 {
   grid-area: skill-column-1;
+  animation: 1.2s ease 0s 1 fadeInFromBottom;
 }
 
 .skill-column-2 {
   grid-area: skill-column-2;
+  animation: 1.2s ease 0s 1 fadeInFromBottom;
 }
 
 .skill-column-3 {
   grid-area: skill-column-3;
+  animation: 1.2s ease 0s 1 fadeInFromBottom;
 }
 
 .hrLine {

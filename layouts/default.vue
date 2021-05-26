@@ -5,7 +5,6 @@
       fixed
       app
       elevate-on-scroll
-      
     >
       <div role="button" class="siteTitle" @click="push('/')">
         <v-toolbar-title v-text="title" class="siteTitle mr-5"/>
@@ -14,11 +13,11 @@
       <div v-if="this.screenWidth >=780">
         <v-btn v-for="nav in this.navbar" :key="nav.title" @click="push(nav.to)" depressed color="transparent" class="ml-3">
           {{ nav.title }}
-        </v-btn>
+        </v-btn>  
       </div>
 
-
       <v-spacer />
+
       <v-btn-toggle
         background="transparent"
         borderless
@@ -32,6 +31,7 @@
           <v-icon>mdi-theme-light-dark</v-icon>
         </v-btn>
       </v-btn-toggle>
+      
       <v-btn
         v-if="this.screenWidth < 780"
         icon
@@ -41,6 +41,10 @@
       </v-btn>
       
     </v-app-bar>
+    <div>
+      <Background v-if="renderComponent"/>
+    </div>
+
     <v-main>
       <v-container>
         <nuxt />
@@ -68,13 +72,16 @@
 </template>
 
 <script>
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Footer from "../layouts/footer"
+import Background from "../layouts/background"
 
 export default {
-  components: { Footer },
+  components: { Footer, Background },
   data () {
     return {
+      renderComponent: true,
       clipped: false,
       drawer: false,
       fixed: false,
@@ -92,15 +99,15 @@ export default {
       navbar: [
         {
           title: "Profile",
-          icon: "mdi-repeat",
+          icon: "mdi-badge-account-horizontal",
           to:"/profile"
         },{
           title: "My Works",
-          icon: "mdi-repeat",
+          icon: "mdi-briefcase",
           to:"/myworks"
         },{
           title: "Contact",
-          icon: "mdi-repeat",
+          icon: "mdi-card-account-mail",
           to:"/contact"
         }
       ],
@@ -109,19 +116,31 @@ export default {
   },
   mounted() {
     this.$vuetify.theme.dark = this.getCookie("isDarkTheme")
+    AOS.init();
     this.screenWidth = window.innerWidth
     window.addEventListener('resize', () => {
       this.screenWidth = window.innerWidth
+    })
+    window.addEventListener('reload', () => {
+      window.scrollTo(0, 0);
+      AOS.init();
     })
   },
   methods: {
     push(location) {
       this.$router.push(location)
     },
+    forceRerender() {
+      this.renderComponent = false;
+      this.$nextTick(() => {
+        this.renderComponent = true;
+      });
+    },
     toggleTheme() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark 
       this.setCookie("isDarkTheme", this.$vuetify.theme.dark, 999)
-      window.location.reload()
+      //window.location.reload()
+      this.forceRerender()
     },
     setCookie(name,value,days) {
         var expires = "";
@@ -164,17 +183,23 @@ export default {
 
 <style lang="scss">
 
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+
   :root {
-    --materialBlue: #5472d3
+    --materialBlue: #5472d3;
   }
   
+  #app {
+    font-family: 'Roboto Slab', serif;
+  }
+
   .darkTheme {
     p {
       transition: 1s;
       color: rgb(202, 202, 202);
     }
     .default-card{
-      background-color: rgb(44, 44, 44);
+      background-color: rgb(77, 77, 77);
       padding: 10px;
     }
     .default-shadow{
@@ -182,6 +207,10 @@ export default {
       -moz-box-shadow: 6px 34px 55px -11px rgb(17, 17, 17);
       box-shadow: 6px 34px 55px -11px rgb(17, 17, 17);
     }
+    .invert-text-color{
+      color: rgb(51, 51, 51);
+    }
+
   }
 
   .lightTheme {
@@ -198,8 +227,33 @@ export default {
       -moz-box-shadow: 6px 34px 55px -11px rgb(17, 17, 17);
       box-shadow: 6px 34px 55px -11px rgba(197, 197, 197, 0.5);
     }
+    .invert-text-color{
+      color: rgb(255, 255, 255);
+    }
   }
 
+.v-card__text, .v-card__title {
+word-break: normal;
+}
+
+.v-card {
+  border-radius: 12px !important;
+
+  
+}
+
+.theme--dark.v-card {
+    -webkit-box-shadow: 6px 34px 55px -11px rgb(17, 17, 17) !important;
+      -moz-box-shadow: 6px 34px 55px -11px rgb(17, 17, 17) !important;
+      box-shadow: 6px 34px 55px -11px rgb(17, 17, 17)  !important;
+}
+
+.theme--light.v-card {
+    -webkit-box-shadow: 6px 34px 55px -11px rgb(17, 17, 17) !important;
+      -moz-box-shadow: 6px 34px 55px -11px rgb(17, 17, 17) !important;
+      box-shadow: 6px 34px 55px -11px rgba(197, 197, 197, 0.5) !important;
+}
+  
   .relative {
     position: relative;
   }

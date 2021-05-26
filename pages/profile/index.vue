@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="background">
-      <Background />
-    </div>
     <div class="content">
       <div>
         <AboutMe class="mt-10"/>
@@ -33,14 +30,15 @@
 import Background from "../../layouts/background"
 import AboutMe from "../../components/profile/aboutMe"
 import Experiences from "../../components/profile/experiences"
-import Education from "../../components/profile/Education"
+import Education from "../../components/profile/education"
 import Skills from "../../components/profile/certifications"
 import Footer from "../../layouts/footer"
 
 export default {
   components: {
     Background, AboutMe, Experiences, Education, Skills, Footer
-  }
+  },
+
 }
 </script>
 

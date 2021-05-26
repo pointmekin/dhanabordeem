@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="background">
-      <Background />
-    </div>
     <div class="content">
       <div>
           <Intro />
@@ -16,13 +13,12 @@
 </template>
 
 <script>
-import Background from "../layouts/background"
 import Intro from "../components/home/intro"
 import Footer from "../layouts/footer"
 
 export default {
   components: {
-    Background, Intro, Footer
+    Intro, Footer
   }
 }
 </script>

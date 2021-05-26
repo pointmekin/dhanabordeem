@@ -17,12 +17,18 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon256.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon256.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;600;700&display=swap'
+      }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/css/main.css'
+    
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

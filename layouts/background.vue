@@ -32,7 +32,7 @@ export default {
     init() {
       console.log(this.getCookie("isDarkTheme"))
       this.scene = new THREE.Scene()
-      this.scene.background = new THREE.Color( this.getCookie("isDarkTheme") ? 0x2e2e2e : 0xffffff );
+      this.scene.background = new THREE.Color( this.getCookie("isDarkTheme") ? 0x2e2e2e : 0xf7f7f7 );
       this.camera = new THREE.PerspectiveCamera(
         75,
         window.innerWidth / window.innerHeight,
