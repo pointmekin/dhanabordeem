@@ -80,10 +80,8 @@ export default {
     display: grid;
     grid-template-columns: 5% 90% 0% 0%;
     grid-template-areas: 
-    "header header header header"
-    ". main main main"
-    ". section section section"
-    "footer footer footer footer";
+    ". main main ."
+    ". section section ."
   }  
 
 }  

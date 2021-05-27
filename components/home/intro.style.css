@@ -253,5 +253,9 @@ a:hover:after {
   .section-divider {
     height: 300px;
   }
+
+  .bottom-section-divider {
+    height: 0px !important;
+  }
   
 }  

@@ -31,7 +31,7 @@
           <v-icon>mdi-theme-light-dark</v-icon>
         </v-btn>
       </v-btn-toggle>
-      
+
       <v-btn
         v-if="this.screenWidth < 780"
         icon
@@ -57,9 +57,17 @@
       fixed
     >
       <v-list>
-        <v-list-item v-for="nav in this.navbar" :key="nav.title" @click="push(nav.to)">
+        <v-list-item @click="push('/')">  
+          <v-list-item-action v-if="screenWidth < 780">
+            <v-icon>
+              mdi-home
+            </v-icon>
+          </v-list-item-action>
+          <v-list-item-title>Home</v-list-item-title>
+        </v-list-item>
+        <v-list-item v-for="nav in this.navbar" :key="nav.title" @click="push(nav.to)">  
           <v-list-item-action>
-            <v-icon light>
+            <v-icon>
               {{ nav.icon }}
             </v-icon>
           </v-list-item-action>

@@ -1,8 +1,9 @@
 <template>
-  <v-footer padless dark :fixed="fixed">
-    <v-card flat tile width="100%" class="grey darken-2 text-center">
-      <v-card-text class="white--text">
-        ©{{ new Date().getFullYear() }} — <strong>Dhanabordee Mekintharanggur | Proudly developed by me ;)</strong>
+  <v-footer padless dense dark :fixed="fixed">
+    <v-card flat tile width="100%" height="4
+    0px" class="grey darken-2 text-center">
+      <v-card-text class="white--text p-0">
+        ©{{ new Date().getFullYear() }} — <strong>Dhanabordee Mekintharanggur</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -20,4 +21,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+  .v-card__subtitle, .v-card__text, .v-card__title {
+    padding: 8px !important;
+  }
+</style>

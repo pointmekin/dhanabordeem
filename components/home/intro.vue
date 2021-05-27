@@ -24,10 +24,14 @@
 
             <div class="connections my-5">
               <div class="logo">
-                <img src="../../assets/linkedin.svg" alt="">
+                <a href="https://www.linkedin.com/in/dhanabordee-m/" target="_blank">
+                  <img src="../../assets/linkedin.svg" alt="">
+                </a>
               </div>
               <div class="logo">
-                <img src="../../assets/github.svg" alt="">
+                <a href="https://github.com/pointmekin" target="_blank">
+                  <img src="../../assets/github.svg" alt="">
+                </a>
               </div>
             </div>
             <div class="links">
@@ -43,6 +47,7 @@
               color="primary"
               block
               class="mt-5"
+              @click="$router.push('/myworks')"
             >
               Portfolio
             </v-btn>
@@ -80,108 +85,27 @@
               </div>
             </div>
           </div>
-          <div class="skills-section">
-            <v-toolbar-title class="section skill-title">Technical Skills</v-toolbar-title>
+          <div class="skills-section mt-8">
+            <v-toolbar-title class="section skill-title">Soft Skills</v-toolbar-title>
             <div  class="flexbox skill">
-              <div v-for="(skill, i) in technicalSkills" :key="i" class="item">
+              <div v-for="(skill, i) in softSkills" :key="i" class="item">
                 <div class="skill-content">
                   <p>{{skill}}</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- DISCOVER MY WORKS SECTION -->
-        <div class="section section-divider arrow-container">
-          <BouncingArrow class="mx-auto"/>
-        </div>
-        <p class="subtitle">HIGHLIGHT</p>
-        <div 
-          data-aos="fade-up"
-          data-aos-delay="300"
-          data-aos-duration="600"
-        >
-          <v-toolbar-title class="section">Discover My Works</v-toolbar-title> 
-          <v-tabs
-            class="section"
-            background-color="transparent"
-            color="deep-blue accent-1"
-            right
-            dense
-            mobile-breakpoint="780"
-          >
-            <v-tab>All</v-tab>
-            <v-tab>Web Development</v-tab>
-            <v-tab>Mobile</v-tab>
-            <v-tab>Design</v-tab>
-            <v-tab-item
-              v-for="n in 4"
-              :key="n"
-              background-color="transparent"
+          <v-btn
+              depressed
+              color="primary"
+              class="mt-5"
+              @click="$router.push('/myworks')"
             >
-              <v-row background-color="transparent" class="">
-                <v-col  
-                  v-for="i in 3"
-                  :key="i"
-                  cols="12"
-                  md="4"
-                  sm="6"
-                >
-                  <div class="project-preview-card">
-                    <v-card
-                      class="mx-auto my-5"
-                      max-width="344"
-                    >
-                      <v-img
-                        src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                        height="200px"
-                      ></v-img>
-
-                      <v-card-title>
-                        Top western road trips
-                      </v-card-title>
-
-                      <v-card-subtitle>
-                        1,000 miles of wonder
-                      </v-card-subtitle>
-
-                      <v-card-actions>
-                        <v-btn
-                          color="orange lighten-2"
-                          text
-                        >
-                          Explore
-                        </v-btn>
-
-                        <v-spacer></v-spacer>
-
-                        <v-btn
-                          icon
-                          @click="show = !show"
-                        >
-                          <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-                        </v-btn>
-                      </v-card-actions>
-
-                      <v-expand-transition>
-                        <div v-show="show">
-                          <v-divider></v-divider>
-
-                          <v-card-text>
-                            I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
-                          </v-card-text>
-                        </div>
-                      </v-expand-transition>
-                    </v-card>
-                  </div>
-                </v-col>  
-              </v-row>
-            </v-tab-item>
-          </v-tabs>
+              View All
+            </v-btn>
         </div>
 
-        <div class="section section-divider arrow-container"></div>
+        <div class="section section-divider bottom-section-divider"></div>
       
         
         
@@ -207,7 +131,8 @@ export default {
     return {
       greetings: "Greetings, my name is ",
       show: false,
-      technicalSkills: ["Multimedia", "Creative Strategy", "Interactive Design", "UI/UX"]
+      technicalSkills: ["Front-end Development", "UI/UX Designing", "Photo and Video Editting", "Graphic Designing"],
+      softSkills: ["Critical-thinker", "Effective Communicator", "Presentation and Public Speaking", "Collaborative Worker", "Tech Savvy"]
     }
   }
 }

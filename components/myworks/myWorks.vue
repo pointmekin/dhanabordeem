@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <div class="description">
-        <div class="top-space"></div>
+        <div class="mt-10"></div>
         <div
           data-aos="fade-in"
           data-aos-delay="300"
@@ -64,19 +64,22 @@
                         {{ item.title }}
                       </v-card-title>
                       <v-card-subtitle>
-                        {{ item.date.toLocaleDateString() }}
+                        {{ item.date.getMonth() + '/' + item.date.getFullYear() }}
                       </v-card-subtitle>
-                      <v-chip
-                        v-for="tag in item.skill"
-                        :key="tag"
-                        class="ml-3"
-                        outlined
-                      >
-                        {{ tag }}
-                      </v-chip>
+                      <div class="ml-3">
+                        <v-chip
+                          v-for="tag in item.skill"
+                          :key="tag"
+                          class="mr-1 my-1"
+                          dark
+                          color="primary"
+                        >
+                          {{ tag }}
+                        </v-chip>
+                      </div>
                       <v-card-actions>
                         <v-btn
-                          color="orange lighten-2"
+                          color="primary lighten-2"
                           text
                           @click="item.showOverlay = !item.showOverlay"
                         >
@@ -86,69 +89,80 @@
                         <v-dialog
                           v-model="item.showOverlay"
                           fullscreen
-                          hide-overlay
                           transition="dialog-bottom-transition"
                           scrollable
                         >
                           <v-card tile class="details">
                             <v-toolbar
                               flat
-                              dark
-                              color="#2196F3"
+                              color="transparent"
                             >
                               <v-btn
                                 icon
-                                dark
                                 @click="item.showOverlay = false"
                               >
                                 <v-icon>mdi-close</v-icon>
                               </v-btn>
-                              <v-toolbar-title>Settings</v-toolbar-title>
+                              <v-toolbar-title >Details</v-toolbar-title>
                               <v-spacer></v-spacer>
                             </v-toolbar>
-                            <div class="default-card default-shadow overlay-container">
-                              <div class="cover-photo">
-                                <section class="gallery">
-                                <div class="gallery__item">
-                                  <input type="radio" id="img-1" checked name="gallery" class="gallery__selector"/>
-                                  <img class="gallery__img" src="https://picsum.photos/id/1015/600/400.jpg" alt=""/>
-                                  <label for="img-1" class="gallery__thumb"><img src="https://picsum.photos/id/1015/150/100.jpg" alt=""/></label>
+                            <div class="default-card default-shadow overlay-container"
+                                data-aos="fade-in"
+                                data-aos-delay="300"
+                                data-aos-duration="1000" 
+                              
+                              >
+                                <div class="cover-photo">
+                                  <div>
+                                    <img :src="item.img" alt="">
+                                  </div>
+                                  <div class="img-container">
+                                    <div class="top">
+                                      <ul>
+                                        <li v-for="(shit, i) in item.imgs" :key="i">
+                                          <a :href="`#${shit.id}`">
+                                            <img :src="shit.img" :id="`#${shit.id}`" alt="">
+                                          </a>
+                                        </li>
+                                      </ul>
+                                      
+                                        <a v-for="(shit, i) in item.imgs" :key="i" href="#" class="lightbox trans" :id="shit.id">
+                                          <div class="zoom-img-container">
+                                            <img :src="shit.img">
+                                          </div>
+                                        </a>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="gallery__item">
-                                  <input type="radio" id="img-2" name="gallery" class="gallery__selector"/>
-                                  <img class="gallery__img" src="https://picsum.photos/id/1039/600/400.jpg" alt=""/>
-                                  <label for="img-2" class="gallery__thumb"><img src="https://picsum.photos/id/1039/150/100.jpg" alt=""/></label>
+                                <div class="full-description">
+                                  <v-card-title>{{ item.title }} </v-card-title>
+                                  <v-card-subtitle>{{ item.date.getMonth() + '/' + item.date.getFullYear() }} </v-card-subtitle>
+                                  <div class="ml-4">
+                                    <v-btn
+                                      v-for="link in item.links"
+                                      :key="link.title"
+                                      :href="link.url" target="_blank"
+                                      depressed
+                                    >
+                                      {{ link.title }}
+                                    </v-btn>
+                                  </div>
+                                  <v-card-text>
+                                    <hr>
+                                    <v-chip
+                                      v-for="tag in item.skill"
+                                      :key="tag"
+                                      class="my-2 mr-2"
+                                      dark
+                                      color="primary"
+                                    >
+                                      {{ tag }}
+                                    </v-chip>
+                                    <hr>
+                                  </v-card-text>
+                                  <v-card-text class="mb-5">{{ item.fullDescription }}</v-card-text>
                                 </div>
-                                <div class="gallery__item">
-                                  <input type="radio" id="img-3" name="gallery" class="gallery__selector"/>
-                                  <img class="gallery__img" src="https://picsum.photos/id/1057/600/400.jpg" alt=""/>
-                                  <label for="img-3" class="gallery__thumb"><img src="https://picsum.photos/id/1057/150/100.jpg" alt=""/></label>
-                                </div>
-                                <div class="gallery__item">
-                                  <input type="radio" id="img-4" name="gallery" class="gallery__selector"/>
-                                  <img class="gallery__img" src="https://picsum.photos/id/106/600/400.jpg" alt=""/>
-                                  <label for="img-4" class="gallery__thumb"><img src="https://picsum.photos/id/106/150/100.jpg" alt=""/></label>
-                                </div>
-                              </section>
                               </div>
-                              <div class="full-description">
-                                <v-card-title>{{ item.title }} </v-card-title>
-                                <v-card-subtitle>{{ item.date }} </v-card-subtitle>
-                                <v-card-text>
-                                  <hr>
-                                  <v-chip
-                                    v-for="tag in item.skill"
-                                    :key="tag"
-                                    class="my-2"
-                                    outlined
-                                  >
-                                    {{ tag }}
-                                  </v-chip>
-                                  <hr>
-                                </v-card-text>
-                                <v-card-text>{{ item.fullDescription }}</v-card-text>
-                              </div>
-                            </div>
                           </v-card>
 
                         </v-dialog>
@@ -270,10 +284,9 @@
 
 }
 
-
-
 .full-description  {
   grid-area: full-description;
+  height: 100%;
 }
 
 .gallery {
@@ -289,75 +302,147 @@
 
 .overlay-container {
   width: 100%;
+  height: 100vh;
   margin: 0 auto !important;
   display: grid;
   grid-template-columns: 10fr 10fr!important;
   grid-template-rows: auto;
   grid-template-areas: 
     "cover-photo full-description"
-    "gallery description"
+    "gallery description";
+  
+  .v-card__title {
+    font-size: 2rem !important;
+  }
 }
 
 .details {
-  background-color: #2196F3
-;
+  background-color: #e7e7e7 !important;
 }
   
 // Gallery CSS
 
-* {
-  box-sizing: border-box;
+.img-container
+{
+	width: 100%;
+  max-height: 500px;
+}
+.trans
+{
+	transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+.top
+{
+	display: flex;
+	width: 100%;
+
+
+}
+.top ul
+{
+	list-style: none;
+	width: 100%;
+  max-height: 100px;
+	z-index: 1;
+	box-sizing: border-box;
+  padding: 0;
+}
+.top ul li
+{
+	position: relative;
+	float: left;
+	width: 20%;
+	overflow: hidden;
+  padding:1%;
 }
 
-$max-img-width: 600px;
-$max-img-height: 400px;
-
-img {
-  max-width: 100%;
-  vertical-align: top;
+.top ul li::before
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	color: white;
+	opacity: 0.4;
+	text-align: center;
+	box-sizing: border-box;
+	pointer-events: none;
+	transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+}
+.top ul li:hover::before
+{
+	opacity: 0;
+	background-color: rgba(0,0,0,0.90);
+}
+.top ul li img
+{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.lightbox
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.75);
+	z-index: 999;
+	opacity: 0;
+	pointer-events: none;
+}
+.lightbox img
+{
+  height: 100%;
+	position: relative;
+	top: -100%;
+  margin: auto 0;
+  object-fit: contain;
+	/* Transition */
+	transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+.lightbox:target
+{
+	outline: none;
+	top: 0;
+	opacity: 1;
+	pointer-events: auto;
+	transition: all 1.2s ease;
+	-moz-transition: all 1.2s ease;
+	-ms-transition: all 1.2s ease;
+	-o-transition: all 1.2s ease;
+	-webkit-transition: all 1.2s ease;
+}
+.lightbox:target img
+{
+	top: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
 }
 
-.gallery {
-  display: flex;
-    margin: 10px auto;
-    max-width: $max-img-width;
-    position: relative;
-    padding-top: $max-img-height/$max-img-width * 100%;
-    
-    @media screen and (min-width: $max-img-width){
-      padding-top: $max-img-height;
-    }
-  
-  &__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-   &__thumb {
-    padding-top: 6px;
-    margin: 6px;
-    display: block;
-  }
-  
-  &__selector {
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    
-    &:checked {
-      + .gallery__img {
-        opacity: 1;
-      }
-      ~ .gallery__thumb > img {
-        box-shadow: 0 0 0 3px #0be2f6;;
-      }
-    }
-  }
-  
- 
+.zoom-img-container {
+  height: 80vh;
+  margin-top: 30px;
 }
 
 @media screen and (max-width: 780px) {
@@ -384,9 +469,20 @@ img {
     display: none;
   }
 
-
-
-
-
+  .overlay-container {
+    width: 100%;
+    margin: 0 auto !important;
+    display: grid;
+    grid-template-columns: 100% !important;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "full-description"
+      "cover-photo"
+      "gallery";
+    
+    .v-card__title {
+      font-size: 2rem !important;
+    }
+  }
 }  
 </style>

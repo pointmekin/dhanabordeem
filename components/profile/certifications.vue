@@ -22,8 +22,9 @@
               <v-sheet
                 class="pa-1 pl-2 primary text-left"
                 dense
+                dark
                 rounded="t-sm"
-                color="blue lighten-2"
+                color="primary"
               >
                 Front-end Development
               </v-sheet>
@@ -61,8 +62,9 @@
               <v-sheet
                 class="pa-1 pl-2 primary text-left"
                 dense
+                dark
                 rounded="t-sm"
-                color="blue lighten-2"
+                color="primary"
               >
                 Back-end Development and Other
               </v-sheet>
@@ -102,8 +104,9 @@
               <v-sheet
                 class="pa-1 pl-2 primary text-left"
                 dense
+                dark
                 rounded="t-sm"
-                color="blue lighten-2"
+                color="primary"
               >
                 UI/UX Design
               </v-sheet>
@@ -141,7 +144,8 @@
                 class="pa-1 pl-2 primary text-left"
                 dense
                 rounded="t-sm"
-                color="blue lighten-2"
+                dark
+                color="blue"
               >
                 Photo and Video
               </v-sheet>
@@ -181,26 +185,24 @@
               rounded="sm"
             >
               <v-sheet
-                class="pa-1 pl-2 primary text-left invert-text-color"
+                class="pa-1 pl-2 primary text-left"
                 dense
+                dark
                 rounded="t-sm"
-                color="blue lighten-2"
+                color="primary"
               >
-                Photo and Video
+                Soft Skills
               </v-sheet>
 
               <div class="pa-4">
                 <v-chip-group column>
                   <v-chip
-                    v-for="tag in photoAndVideoTags"
+                    v-for="tag in softSkills"
                     :key="tag.title"
                     class="ma-2"
                     outlined
                   >
-                    <v-avatar left>
-                        <img :src="tag.icon" alt="">
-                      </v-avatar>
-                    {{ tag.title }}
+                    {{ tag }}
                   </v-chip>
                 </v-chip-group>
               </div>
@@ -275,6 +277,7 @@ export default {
         {title: "Premiere Pro", icon: premiere},
         {title: "InDesign", icon: indesign},
       ],
+      softSkills: ["Critical-thinker", "Effective Communicator", "Presentation and Public Speaking", "Collaborative Worker", "Tech Savvy"]
     };
   },
   methods: {
