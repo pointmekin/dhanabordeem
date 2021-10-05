@@ -87,6 +87,12 @@ import Background from "../layouts/background"
 
 export default {
   components: { Footer, Background },
+  head() {
+    return {
+      title: "Dhanabordee's Portfolio",
+      meta: [ { hid: 'og:image', property: 'og:image', content: `${this.$config.baseURL}/point.png` } ]
+    }
+  },
   data () {
     return {
       renderComponent: true,
