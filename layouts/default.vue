@@ -296,6 +296,15 @@ word-break: normal;
     text-decoration: none;
   }
 
+  .v-toolbar__title{
+    transition: 1s ease;
+  }
+
+  .v-toolbar__title:hover {
+    transform: scale(1.05, 1.05);
+    transition: 0.5s ease;
+  }
+
   p {
     color: hsla(0, 0%, 45%, 0.822);
   }

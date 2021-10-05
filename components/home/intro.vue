@@ -138,6 +138,6 @@ export default {
 }
 </script>
 
-<style scoped>
-@import "./intro.style.css"
+<style lang="scss" scoped>
+@import "./intro.style.scss"
 </style>

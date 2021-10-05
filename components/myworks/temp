@@ -1,0 +1,57 @@
+<div class="default-card default-shadow overlay-container"
+  data-aos="fade-in"
+  data-aos-delay="300"
+  data-aos-duration="1000" 
+
+>
+  <div class="cover-photo">
+    <div>
+      <img :src="item.img" alt="">
+    </div>
+    <div class="img-container">
+      <div class="top">
+        <ul>
+          <li v-for="(shit, i) in item.imgs" :key="i">
+            <a :href="`#${shit.id}`">
+              <img :src="shit.img" :id="`#${shit.id}`" alt="">
+            </a>
+          </li>
+        </ul>
+        
+          <a v-for="(shit, i) in item.imgs" :key="i" href="#" class="lightbox trans" :id="shit.id">
+            <div class="zoom-img-container">
+              <img :src="shit.img">
+            </div>
+          </a>
+      </div>
+    </div>
+  </div>
+  <div class="full-description">
+    <v-card-title>{{ item.title }} </v-card-title>
+    <v-card-subtitle>{{ item.date.getMonth() + '/' + item.date.getFullYear() }} </v-card-subtitle>
+    <div class="ml-4">
+      <v-btn
+        v-for="link in item.links"
+        :key="link.title"
+        :href="link.url" target="_blank"
+        depressed
+      >
+        {{ link.title }}
+      </v-btn>
+    </div>
+    <v-card-text>
+      <hr>
+      <v-chip
+        v-for="tag in item.skill"
+        :key="tag"
+        class="my-2 mr-2"
+        dark
+        color="primary"
+      >
+        {{ tag }}
+      </v-chip>
+      <hr>
+    </v-card-text>
+    <v-card-text class="mb-5">{{ item.fullDescription }}</v-card-text>
+  </div>
+</div>
