@@ -59,7 +59,7 @@ export default {
     {
       hid: "og:image",
       property: "og:image",
-      content: "/point.png",
+      content: "https://ibb.co/Js515Sj",
     },
   ]
 }

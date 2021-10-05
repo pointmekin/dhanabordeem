@@ -23,7 +23,7 @@ export default {
   head() {
     return {
       title: "Dhanabordee's Portfolio",
-      meta: [ { hid: 'og:image', property: 'og:image', content: `${this.$config.baseURL}/point.png` } ]
+      meta: [ { hid: 'og:image', property: 'og:image', content: "https://ibb.co/Js515Sj" } ]
     }
   }
 }
