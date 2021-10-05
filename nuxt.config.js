@@ -75,6 +75,11 @@ export default {
     }
   },
   publicRuntimeConfig: { baseURL: "https://dhanabordeem.netlify.app" },
+  hooks: {
+    'generate:page': page => {
+      page.html = page.html.replace(/ data-n-head=".*?"/gi, '').replace(/ data-hid=".*?"/gi, '')
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
