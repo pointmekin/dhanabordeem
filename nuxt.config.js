@@ -73,7 +73,7 @@ export default {
       }
     }
   },
-  publicRuntimeConfig: { baseURL: process.env.NUXT_BASE_URL },
+  publicRuntimeConfig: { baseURL: "https://dhanabordeem.netlify.app" },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
