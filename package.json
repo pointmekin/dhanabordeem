@@ -17,7 +17,8 @@
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12",
     "three": "^0.128.0",
-    "v-animate-css": "0.0.3"
+    "v-animate-css": "0.0.3",
+    "vue-meta": "^2.4.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.12",

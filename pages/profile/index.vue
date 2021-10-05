@@ -38,30 +38,33 @@ export default {
   components: {
     Background, AboutMe, Experiences, Education, Skills, Footer
   },
-  meta: [
-    { property: "og:site_name", content: "Dhanabordee's Portfolio" },
-    { hid: "og:type", property: "og:type", content: "website" },
-    {
-      hid: "og:url",
-      property: "og:url",
-      content: "https://dhanabordeem.netlify.app",
-    },
-    {
-      hid: "og:title",
-      property: "og:title",
-      content: "Dhanabordee's Portfolio",
-    },
-    {
-      hid: "og:description",
-      property: "og:description",
-      content: "Greetings, my name is Point and I'm a web developer!",
-    },
-    {
-      hid: "og:image",
-      property: "og:image",
-      content: "https://ibb.co/Js515Sj",
-    },
-  ]
+  head: {
+    title: "Dhanabordee's Portfolio",
+    meta: [
+      { property: "og:site_name", content: "Dhanabordee's Portfolio" },
+      { hid: "og:type", property: "og:type", content: "website" },
+      {
+        hid: "og:url",
+        property: "og:url",
+        content: "https://dhanabordeem.netlify.app",
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Dhanabordee's Portfolio",
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: "Greetings, my name is Point and I'm a web developer!",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "https://ibb.co/Js515Sj",
+      },
+    ]
+  }
 }
 </script>
 
