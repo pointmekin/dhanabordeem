@@ -15,7 +15,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { hid: 'og:image', property: 'og:image', content: "https://ibb.co/Js515Sj" }
+      { hid: 'og:image', property: 'og:image', content: "https://i.ibb.co/crDBDsh/point.jpg" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon256.ico' },

@@ -147,7 +147,7 @@ export default {
       {
         hid: "og:image",
         property: "og:image",
-        content: "https://ibb.co/Js515Sj",
+        content: "https://i.ibb.co/crDBDsh/point.jpg",
       },
     ]
   },
