@@ -13,7 +13,7 @@ import MiraCal4 from "../../assets/projects/Miracal/4.jpg"
 import MiraCal5 from "../../assets/projects/Miracal/5.jpg"
 import MiraCal6 from "../../assets/projects/Miracal/6.jpg"
 import MiraCal7 from "../../assets/projects/Miracal/7.jpg"
-import MiraCalDesign from "../../assets/projects/Miracal/MiraCalDesign.png"
+import MiracalDesign from "../../assets/projects/Miracal/MiracalDesign.png"
 
 import SaveMeCover from "../../assets/projects/SaveMe/SaveMeCover.png"
 import SaveMe1 from "../../assets/projects/SaveMe/SaveMe1.png"
@@ -240,7 +240,7 @@ export default {
             fullDescription: "MiraCal is a fitness application for exercise and food calorie intake record keeping. Users can select a weight goal and follow Miracal's generated calorie plan. In addition users can record the food they eat and the exercises they completed from our list for easy access. The team consisted of a Project Manager, Back-end Developer, and me, the Front-end developer. Firebase Authentication is also enabled in this application. The application havn't been published on the Apple AppStore or Google PlayStore, but the stable .APK version is available for download.",
             img: Miracal_logo,
             imgs: [
-              {id: 'MiraCalDesign', img: MiraCalDesign},
+              {id: 'MiracalDesign', img: MiracalDesign},
               {id: 'MiraCal1', img: MiraCal1},
               {id: 'MiraCal2', img: MiraCal2},
               {id: 'MiraCal3', img: MiraCal3},
