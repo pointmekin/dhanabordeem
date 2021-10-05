@@ -19,6 +19,12 @@ import Footer from "../layouts/footer"
 export default {
   components: {
     Intro, Footer
+  },
+  head() {
+    return {
+      title: "Dhanabordee's Portfolio",
+      meta: [ { hid: 'og:image', property: 'og:image', content: `${this.$config.baseURL}/point.png` } ]
+    }
   }
 }
 </script>

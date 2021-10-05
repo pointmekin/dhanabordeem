@@ -20,7 +20,7 @@
               <v-card-title>{{ experience.title }}</v-card-title>
               <p class="mt-5 mr-3">{{ experience.date }}</p>
             </div>
-            <v-card-subtitle class="pt-0">{{ experience.subtitle }}</v-card-subtitle>
+            <v-card-subtitle class="experience-subtitle">{{ experience.subtitle }}</v-card-subtitle>
             <v-card-text class="experience-description">{{ experience.description }}</v-card-text>
           </div>
         </v-col>
@@ -36,23 +36,23 @@ export default {
     return {
       experiences: [
         {
-          title: "Site of the day1",
-          date: "2019",
-          subtitle: "subtitle",
-          description: "description asdfasdfadsf"
+          title: "Front-end Developer Intern",
+          date: "2021",
+          subtitle: "LINE Company Thailand",
+          description: "Completed LINE ROOKIE summer internship program, developing and maintaining the LINE SHOPPING web application."
         },
         {
-          title: "Site of the day2",
-          date: "2019",
-          subtitle: "subtitle",
-          description: "description"
+          title: "Part-time Front-end Developer",
+          date: "2021",
+          subtitle: "PlanIT Trip Planner",
+          description: "Develops and maintains planittripplanner.com as a front-end developer."
         },
         {
-          title: "Site of the day3",
-          date: "2019",
-          subtitle: "subtitle",
-          description: "description"
-        }
+          title: "Front-end Developer Lead and UI/UX Designer Lead",
+          date: "2020",
+          subtitle: "Chulalongkorn University Sports Center Booking",
+          description: "Lead the team of front-end developers and UI/UX designers in designing and developing a sports center reservation for Chulalongkorn University Sports Center in the namne of Thinc Club."
+        },
       ]
     };
   }
@@ -139,6 +139,11 @@ export default {
   text-align: right !important;
 }
 
+.experience-subtitle {
+  margin-top: -20px;
+  margin-bottom: 15px;
+}
+
 @media screen and (max-width: 780px) {
   .sidebar {
     margin-top: 10px;
@@ -157,6 +162,7 @@ export default {
       ". description description ."
       ". sidebar sidebar .";
   }
+
   .top-space {
     display: none;
   }

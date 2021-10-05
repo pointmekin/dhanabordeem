@@ -28,7 +28,6 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/css/main.css'
-    
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -74,6 +73,7 @@ export default {
       }
     }
   },
+  publicRuntimeConfig: { baseURL: process.env.NUXT_BASE_URL },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

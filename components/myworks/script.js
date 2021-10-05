@@ -437,7 +437,7 @@ export default {
         categoryTitle: "Internship",
         projects: [
           {
-            title: "[LINE ROOKIE] Front-end Developer Intern",
+            title: "⭐ [LINE ROOKIE] Front-end Developer Intern",
             skill: ["LINE Thailand", "Front-end Development", "Back-end Development", "Web Development", "Vue", "Go", "Typescript"],
             description: "Front-end developer intern at LINE Company Thailand from June 2021 to August 2021",
             fullDescription: "As a front-end developer in the social commerce team (Team Unicorn), I received the chance to work on multiple aspects of the LINE SHOPPING web application, including front-end and back-end tasks. Together with my co-worker intern, we have re-written the LINE SHOPPING site in Vue3 with Vite (originally Vue2) and Typescript. A published the new searchbar UI and search tabs functionality while maintaining the LING SHOPPING home repository. I delivered enhancements to the backend infrastructures built using Go and RabbitMQ, and sure the quality and correctness with unit test (Ginkgo) and integration tests (Cypress).",
@@ -455,7 +455,7 @@ export default {
             ]
           },
           {
-            title: "[LINE ROOKIE] Day in a life",
+            title: "⭐ [LINE ROOKIE] Day in a life",
             skill: ["LINE Thailand", "Day in a life"],
             description: "Join me as I go through my day as a LINE ROOKIE from the Work-from-home and Work-from-office perspective.",
             fullDescription: "This video is a part of the LINE ROOKIE Story-teller project. In this vlog, I will bring you along my day as a LINE ROOKIE working from home and at the office, and my thoughts on the experience.",
@@ -473,7 +473,7 @@ export default {
             ]
           },
           {
-            title: "[LINE ROOKIE] That time LINE ROOKIES migrated LINE SHOPPING to Vue 3",
+            title: "⭐ [LINE ROOKIE] That time LINE ROOKIES migrated LINE SHOPPING to Vue 3",
             skill: ["LINE Thailand", "Day in a life"],
             description: "A Medium article detailing my journey as I and my co-worker migrates LINE SHOPPING home from Vue2 to Vue 3.",
             fullDescription: "A Medium article detailing my journey as I and my co-worker migrates LINE SHOPPING home from Vue2 to Vue 3",

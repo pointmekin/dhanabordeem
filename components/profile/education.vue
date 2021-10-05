@@ -48,7 +48,7 @@ export default {
           title: "Faculty of Engineering, Chulalongkorn University",
           date: "2019-present",
           subtitle: "B.A. in Information and Communication Engineering (International Program)",
-          description: "Cumulative GPA: 3.67 (As of Semester 3, 2021)",
+          description: "Cumulative GPA: 3.74 (As of Semester 4, 2021)",
           img: ChulaLogo
         },
         {

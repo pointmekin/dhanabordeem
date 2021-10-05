@@ -7,7 +7,7 @@
             data-aos-delay="300"
             data-aos-duration="1000" 
           >
-            <div class=" greetings">
+            <div class="greetings">
               <p>{{ this.greetings }} <b>Point</b></p>
             </div>
             <div class="name mt-5">
@@ -15,7 +15,7 @@
               <h2>Mekintharanggur</h2>
             </div>
             <div class="information mt-3">
-              <h4>I’m a frontend developer.</h4>
+              <h4>I’m a front-end developer.</h4>
               <p class="mt-3">CU103 | ISE <br/>
                   Information and Communication Engineering <br/>
                   Welcome to the collection of my experiences.

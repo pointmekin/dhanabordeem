@@ -91,7 +91,7 @@
     <div 
       class="skill-column-2" 
     >
-<!-- DESIGN SKILLS -->
+<!-- VERSION CONTROL SKILLS -->
       <div>
         <v-row justify="center">
           <v-col
@@ -115,6 +115,45 @@
                 <v-chip-group column>
                   <v-chip
                     v-for="tag in UIUXTags"
+                    :key="tag.title"
+                    class="ma-2"
+                    outlined
+                  >
+                    <v-avatar left>
+                        <img :src="tag.icon" alt="">
+                      </v-avatar>
+                    {{ tag.title }}
+                  </v-chip>
+                </v-chip-group>
+              </div>
+            </v-sheet>
+          </v-col>
+        </v-row>
+      </div>
+<!-- DESIGN SKILLS -->
+      <div>
+        <v-row justify="center">
+          <v-col
+            cols="11"
+          >
+            <v-sheet
+              class="default-shadow default-card"
+              rounded="sm"
+            >
+              <v-sheet
+                class="pa-1 pl-2 primary text-left"
+                dense
+                dark
+                rounded="t-sm"
+                color="primary"
+              >
+                Version Control
+              </v-sheet>
+
+              <div class="pa-4">
+                <v-chip-group column>
+                  <v-chip
+                    v-for="tag in vertionControlTags"
                     :key="tag.title"
                     class="ma-2"
                     outlined
@@ -240,6 +279,10 @@ import premiere from "../../assets/icons/premiere.png"
 import indesign from "../../assets/icons/indesign.png"
 import java from "../../assets/icons/java.png"
 import python from "../../assets/icons/python.png"
+import golang from "../../assets/icons/go.png"
+import tailwind from "../../assets/icons/tailwind.jpeg"
+import rabbitmq from "../../assets/icons/rabbitmq.png"
+import gitlab from "../../assets/icons/gitlab.png"
 
 export default {
   name: "Skills",
@@ -253,6 +296,7 @@ export default {
         {title: "CSS3", icon: css3},
         {title: "Javascript", icon: js},
         {title: "Typescript", icon: ts},
+        {title: "TailwindCSS", icon: tailwind},
         {title: "Bootstrap", icon: bootstrap},
         {title: "Vuetify", icon: vuetify},
         {title: "Angular", icon: angular},
@@ -262,9 +306,10 @@ export default {
         {title: "Express", icon: express},
         {title: "Firebase", icon: firebase},
         {title: "MongoDB", icon: mongodb},
-        {title: "Github", icon: github},
         {title: "Java", icon: java},
         {title: "Python", icon: python},
+        {title: "Go", icon: golang},
+        {title: "RabitMQ", icon: rabbitmq},
       ],
       UIUXTags: [
         {title: "Figma", icon: figma},
@@ -276,6 +321,10 @@ export default {
         {title: "Illustrator", icon: illustrator},
         {title: "Premiere Pro", icon: premiere},
         {title: "InDesign", icon: indesign},
+      ],
+      vertionControlTags: [
+        {title: "Github", icon: github},
+        {title: "GitLab", icon: gitlab},
       ],
       softSkills: ["Critical-thinker", "Effective Communicator", "Presentation and Public Speaking", "Collaborative Worker", "Tech Savvy"]
     };
