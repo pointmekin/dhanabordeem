@@ -5,7 +5,7 @@ import CUSCFigma from "../../assets/projects/cusc/CUSCFigma.png"
 import CUSCScreenshot from "../../assets/projects/cusc/CUSCScreenshot.png"
 import CUSCCover from "../../assets/projects/cusc/CUSCCover.png"
 
-import Miracal_logo from "../../assets/projects/Miracal/Miracal_logo.png"
+import Miracal_logo from "../../assets/projects/Miracal/MiracalLogo.png"
 import MiraCal1 from "../../assets/projects/Miracal/1.jpg"
 import MiraCal2 from "../../assets/projects/Miracal/2.jpg"
 import MiraCal3 from "../../assets/projects/Miracal/3.jpg"
