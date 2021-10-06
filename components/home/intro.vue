@@ -15,14 +15,24 @@
               <h2>Mekintharanggur</h2>
             </div>
             <div class="information mt-3">
-              <h4>I’m a front-end developer.</h4>
+              <div class="wrapper">
+                <div class="static-txt">I'm a</div>
+                <ul :class="isDarkTheme ? 'dark' : 'light'" class="dynamic-txts">
+                  <li><span>Front-end Developer &nbsp;</span></li>
+                  <li><span>Front-end Developer &nbsp;</span></li>
+                  <li><span>UI / UX Designer    &nbsp;</span></li>
+                  <li><span>UI / UX Designer    &nbsp;</span></li>
+                  
+                </ul>
+              </div>
+              
               <p class="mt-3">CU103 | ISE <br/>
                   Information and Communication Engineering <br/>
                   Welcome to the collection of my experiences.
               </p>
             </div>
 
-            <div class="connections my-5">
+            <div class="connections">
               <div class="logo">
                 <a href="https://www.linkedin.com/in/dhanabordee-m/" target="_blank">
                   <img src="../../assets/linkedin.svg" alt="">
@@ -121,7 +131,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { defaultMeta } from '../meta';
 
-
 export default {
   name:"Intro",
   components: {BouncingArrow},
@@ -134,12 +143,30 @@ export default {
   mounted() {
     AOS.init();
   },
+  computed: {
+    isDarkTheme: function(){
+      return this.$vuetify.theme.dark
+    }
+  },
   data() {
     return {
       greetings: "Greetings, my name is ",
       show: false,
       technicalSkills: ["Front-end Development", "UI/UX Designing", "Photo and Video Editting", "Graphic Designing"],
-      softSkills: ["Critical-thinker", "Effective Communicator", "Presentation and Public Speaking", "Collaborative Worker", "Tech Savvy"]
+      softSkills: ["Critical-thinker", "Effective Communicator", "Presentation and Public Speaking", "Collaborative Worker", "Tech Savvy"],
+      // isDarkTheme: this.getCookie("isDarkTheme"),
+   }
+  },
+  methods: {
+    getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for(var i=0;i < ca.length;i++) {
+          var c = ca[i];
+          while (c.charAt(0)==' ') c = c.substring(1,c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+      }
+      return null;
     }
   }
 }

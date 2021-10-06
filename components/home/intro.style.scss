@@ -73,6 +73,11 @@
   font-size: 2rem;
 }
 
+.information {
+  position: relative;
+  top: -40px;
+}
+
 .information h4 {
   font-size: 1.5rem;
   color: var(--materialBlue);
@@ -81,6 +86,8 @@
 .connections {
   display: flex;
   flex-direction: row;
+  position:relative;
+  top: -40px;
 }
 
 .connections img{
@@ -265,3 +272,93 @@ a:hover:after {
   }
   
 }  
+
+
+// ANIMATED TEXT
+
+.wrapper{
+  display: flex;
+  position: relative;
+  top: 20px;
+}
+.wrapper .static-txt{
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  top: 30px;
+}
+.wrapper .dynamic-txts{
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+  padding-left: 12px;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #186dee;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 20px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  padding-right: 10px;
+
+  border-left: 2px solid #11499e;
+  animation: typing 12s steps(10) infinite;
+}
+@keyframes typing {
+  0%{
+    left: 0;
+  }
+  10%, 12%{
+    left: 97%;
+  }
+  48%{
+    left: 97%;
+  }
+  50%{
+    left: 0;
+  }
+  60%, 62%{
+    left: 97%;
+  }
+  66%{
+    left: 97%;
+  }
+  // 95%{
+  //   left: inherit;
+  // }
+  98%{
+    left: 97%;
+  }
+  100%{
+    left: 0;
+  }
+
+}
+
+.dark li span::after{
+ background: #2e2e2e;
+}
+
+.light li span::after{
+  background: #f7f7f7;
+}

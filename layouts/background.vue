@@ -45,7 +45,7 @@ export default {
       document.body.appendChild(this.renderer.domElement)
 
       const geometry = new THREE.TorusGeometry (10, 3, 16, 100 )
-      const material = new THREE.MeshBasicMaterial({ color: this.getCookie("isDarkTheme") ? 0x545454 : 0xe6e6e6, wireframe: true })
+      const material = new THREE.MeshBasicMaterial({ color: this.getCookie("isDarkTheme") ? 0x373737 : 0xe6e6e6, wireframe: true })
       this.torus = new THREE.Mesh(geometry, material)
       this.scene.add(this.torus)
       this.camera.position.z = 5
