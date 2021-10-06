@@ -15,13 +15,18 @@
 <script>
 import Footer from "../../layouts/footer"
 import MyWorks from "../../components/myworks/myWorks"
+import { defaultMeta } from '~/components/meta'
 
 export default {
   components: {
     Footer, MyWorks
   },
-  
-
+  head: {
+    title: "Dhanabordee's Portfolio",
+    meta: [
+      ...defaultMeta
+    ]
+  }
 }
 </script>
 

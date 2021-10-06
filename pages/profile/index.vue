@@ -33,6 +33,7 @@ import Experiences from "../../components/profile/experiences"
 import Education from "../../components/profile/education"
 import Skills from "../../components/profile/certifications"
 import Footer from "../../layouts/footer"
+import { defaultMeta } from '~/components/meta'
 
 export default {
   components: {
@@ -41,28 +42,7 @@ export default {
   head: {
     title: "Dhanabordee's Portfolio",
     meta: [
-      { property: "og:site_name", content: "Dhanabordee's Portfolio" },
-      { hid: "og:type", property: "og:type", content: "website" },
-      {
-        hid: "og:url",
-        property: "og:url",
-        content: "https://dhanabordeem.netlify.app",
-      },
-      {
-        hid: "og:title",
-        property: "og:title",
-        content: "Dhanabordee's Portfolio",
-      },
-      {
-        hid: "og:description",
-        property: "og:description",
-        content: "Greetings, my name is Point and I'm a web developer!",
-      },
-      {
-        hid: "og:image",
-        property: "og:image",
-        content: "https://i.ibb.co/crDBDsh/point.jpg",
-      },
+      ...defaultMeta
     ]
   }
 }

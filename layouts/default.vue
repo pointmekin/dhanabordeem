@@ -84,14 +84,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Footer from "../layouts/footer"
 import Background from "../layouts/background"
+import { defaultMeta } from '~/components/meta';
 
 export default {
   components: { Footer, Background },
-  head() {
-    return {
-      title: "Dhanabordee's Portfolio",
-      meta: [ { hid: 'og:image', property: 'og:image', content: `${this.$config.baseURL}/point.png` } ]
-    }
+  head: {
+    title: "Dhanabordee's Portfolio",
+    meta: [
+      ...defaultMeta
+    ]
   },
   data () {
     return {

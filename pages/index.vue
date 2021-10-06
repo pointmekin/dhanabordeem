@@ -2,9 +2,8 @@
   <div>
     <div class="content">
       <div>
-          <Intro />
-        </div>
-
+        <Intro />
+      </div>
       <div class="">
         <Footer />
       </div>
@@ -13,6 +12,7 @@
 </template>
 
 <script>
+import { defaultMeta } from '~/components/meta'
 import Intro from "../components/home/intro"
 import Footer from "../layouts/footer"
 
@@ -23,7 +23,7 @@ export default {
   head() {
     return {
       title: "Dhanabordee's Portfolio",
-      meta: [ { hid: 'og:image', property: 'og:image', content: "https://i.ibb.co/crDBDsh/point.jpg" } ]
+      meta: [ ...defaultMeta ]
     }
   }
 }

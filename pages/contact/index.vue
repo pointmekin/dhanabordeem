@@ -16,10 +16,17 @@
 <script>
 import Footer from "../../layouts/footer"
 import ContactCard from "../../components/contact/contactCard"
+import { defaultMeta } from '~/components/meta'
 
 export default {
   components: {
     Footer, ContactCard
+  },
+  head: {
+    title: "Dhanabordee's Portfolio - Contact",
+    meta: [
+      ...defaultMeta
+    ]
   },
   data() {
     return {
