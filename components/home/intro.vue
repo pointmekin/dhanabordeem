@@ -45,7 +45,8 @@
               </div>
             </div>
             <div class="links">
-              Download my <a href="#">CV</a> and <a href="#">Resume</a>
+              Download my 
+              <a href="https://drive.google.com/drive/folders/1TTybFkX_Qt7DNtaTC23M1RgtcHTRQpU3?usp=sharing" target="_blank">Resume</a>
             </div>
             <hr class="mt-5 mb-3"/>
           </div>
