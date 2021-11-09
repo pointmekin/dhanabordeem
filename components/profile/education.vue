@@ -47,15 +47,15 @@ export default {
         {
           title: "Faculty of Engineering, Chulalongkorn University",
           date: "2019-present",
-          subtitle: "B.A. in Information and Communication Engineering (International Program)",
-          description: "Cumulative GPA: 3.74 (As of Semester 4, 2021)",
+          subtitle: "Bachelor of Engineering, majoring in Information and Communication Engineering (International Program)",
+          description: "Cumulative GPA: 3.74 (As of Semester 4, 2021). Awarded with 50% ISE Scholarship",
           img: ChulaLogo
         },
         {
           title: "Ekamai International School",
           date: "2012-2019",
           subtitle: "Science Diploma with Emphasis on Medicine",
-          description: "Cumulative GPA: 3.94",
+          description: "Cumulative GPA: 3.94, Second Honor Award",
           img: EISLogo
         },
       ]

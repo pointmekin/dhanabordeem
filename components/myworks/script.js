@@ -68,6 +68,13 @@ import Sportini from "../../assets/projects/Sportini/Sportini.png"
 
 import PageRank from "../../assets/projects/PageRank/PageRank.png"
 
+import iqCover from "../../assets/projects/IQ180/iqCover.png"
+import iq1 from "../../assets/projects/IQ180/iq1.png"
+import iq2 from "../../assets/projects/IQ180/iq2.png"
+import iq3 from "../../assets/projects/IQ180/iq3.png"
+import iq4 from "../../assets/projects/IQ180/iq4.png"
+import iq5 from "../../assets/projects/IQ180/iq5.png"
+
 export default {
   name: "MyWorks",
   mounted() {
@@ -101,7 +108,8 @@ export default {
             show: false,
             showOverlay: false,
             links: [
-              {title: "CUSC Booking", url: "https://book.cusc.chula.ac.th"}
+              {title: "CUSC Booking", url: "https://book.cusc.chula.ac.th"},
+              {title: "Source Code", url: "https://github.com/thinc-org/sport-complex-booking-frontend"},
             ]
           },
           {
@@ -227,7 +235,29 @@ export default {
               {title: "Add the chatbot", url: "https://line.me/R/ti/p/%40245sdugm"},
             ]
           },
-          
+          {
+            title: "⭐ IQ180 - Web Socket Multiplayer Game",
+            skill: ["React", "MUI", "Socket.io", "Express", "Figma"],
+            description: "A multiplayer iq180 game implemented using React and Socket.io.",
+            fullDescription: "This project is a part of Netcentric Architecture course's final project. IQ180 is a multiplayer game where players take turns or compete to calculate for the given target number using the provided operators and operands. The game uses Socket.io to enable a real-time multiplayer experience between the players. The front-end application is build to be fully responsive with various cool features baked in, such as darkmode, music and sfx control, and various game mode settings to choose from. The front-end project is built using React with Typescript and Material UI, and the back-end was built using Express.js with Socket.io.",
+            img: iqCover,
+            imgs: [
+              {id: 'iq1', img: iq1},
+              {id: 'iq2', img: iq2},
+              {id: 'iq3', img: iq3},
+              {id: 'iq4', img: iq4},
+              {id: 'iq5', img: iq5},
+            ],
+            date: new Date(2021, 10, 5),
+            significance: 99,
+            category: 1,
+            show: false,
+            showOverlay: false,
+            links: [
+              {title: "IQ180 Game", url: "https://iq180.netlify.app"},
+              {title: "Source Code", url: "https://github.com/180IQ-Netcentric/iq180-frontend-migrated"},
+            ]
+          },
         ]
       },
       mobileDevelopment: {
@@ -451,7 +481,7 @@ export default {
             show: false,
             showOverlay: false,
             links: [
-              {title: "LINE ROOKIE Certificate (TBA)", url: "https://www.youtube.com/watch?v=3G3NffIrSu4"},
+              {title: "LINE ROOKIE Certificate", url: "https://drive.google.com/file/d/1xkbSHYjbnAVhB0FwE6ADlQTNZ3yvfgF7/view?usp=sharing"},
             ]
           },
           {
@@ -474,7 +504,7 @@ export default {
           },
           {
             title: "⭐ [LINE ROOKIE] That time LINE ROOKIES migrated LINE SHOPPING to Vue 3",
-            skill: ["LINE Thailand", "Day in a life"],
+            skill: ["LINE Developers Thailand", "Medium Blog", "Vue"],
             description: "A Medium article detailing my journey as I and my co-worker migrates LINE SHOPPING home from Vue2 to Vue 3.",
             fullDescription: "A Medium article detailing my journey as I and my co-worker migrates LINE SHOPPING home from Vue2 to Vue 3",
             img: Vue2Vue3,

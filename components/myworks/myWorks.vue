@@ -46,7 +46,7 @@
                 <div class="project-preview-card">
                   <v-card class="mx-auto my-5" max-width="344">
                     <v-img :src="item.img" height="200px"></v-img>
-                    <v-card-title>
+                    <v-card-title class="project-title" @click="item.showOverlay = !item.showOverlay">
                       {{ item.title }}
                     </v-card-title>
                     <v-card-subtitle>
@@ -281,6 +281,15 @@
   img {
     width: 100%;
     border-radius: 16px;
+  }
+}
+
+.project-title {
+  transition: all 0.3s linear;
+  &:hover {
+    cursor: pointer;
+    color: rgb(31, 85, 220);
+    transition: all 0.3s linear;
   }
 }
 

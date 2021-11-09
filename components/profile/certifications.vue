@@ -184,7 +184,7 @@
                 dense
                 rounded="t-sm"
                 dark
-                color="blue"
+                color="primary"
               >
                 Photo and Video
               </v-sheet>
@@ -283,6 +283,7 @@ import golang from "../../assets/icons/go.png"
 import tailwind from "../../assets/icons/tailwind.jpeg"
 import rabbitmq from "../../assets/icons/rabbitmq.png"
 import gitlab from "../../assets/icons/gitlab.png"
+import socketio from "../../assets/icons/socketio.svg"
 
 export default {
   name: "Skills",
@@ -310,6 +311,7 @@ export default {
         {title: "Python", icon: python},
         {title: "Go", icon: golang},
         {title: "RabitMQ", icon: rabbitmq},
+        {title: "Socket.io", icon: socketio},
       ],
       UIUXTags: [
         {title: "Figma", icon: figma},

@@ -38,9 +38,9 @@
 }
 
 .profile-img {
-  -webkit-box-shadow: 6px 34px 55px -11px rgba(189,189,189,1);
-  -moz-box-shadow: 6px 34px 55px -11px rgba(189,189,189,1);
-  box-shadow: 6px 34px 55px -11px rgba(189,189,189,1);
+  -webkit-box-shadow: 6px 34px 55px -11px rgba(133, 133, 133, 0.6);
+  -moz-box-shadow: 6px 34px 55px -11px rgba(133, 133, 133, 0.6);
+  box-shadow: 6px 34px 55px -11px rgba(133, 133, 133, 0.6);
   animation: 1.2s ease 0s 1 slideInFromBottom;
 }
 
@@ -160,7 +160,6 @@ a:hover:after {
 .project-preview-card {
   background: transparent !important;
   background-color: transparent !important;
-  
 }
 
 .skill-title {
