@@ -24,6 +24,14 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;600;700&display=swap'
       }
+    ],
+    script: [
+      {
+        async: true,
+        defer: true,
+        'data-website-id': '1a80aced-e2de-4ad9-a41d-0dcc2680a2e1',
+        src: 'https://dhanabordeem-analytics.herokuapp.com/umami.js'
+      }
     ]
   },
 
