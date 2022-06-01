@@ -24,5 +24,11 @@ export const defaultMeta = [
     property: "og:image",
     name: "og:image",
     content: "https://i.ibb.co/crDBDsh/point.jpg"
+  },
+  {
+    hid: "og:image",
+    property: "og:image",
+    name: "image",
+    content: "https://i.ibb.co/crDBDsh/point.jpg"
   }
 ];
