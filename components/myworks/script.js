@@ -75,6 +75,10 @@ import iq3 from "../../assets/projects/IQ180/iq3.png"
 import iq4 from "../../assets/projects/IQ180/iq4.png"
 import iq5 from "../../assets/projects/IQ180/iq5.png"
 
+import Emit from "../../assets/projects/EMIT/EMIT.png"
+
+import Aegis from "../../assets/projects/Aegis/Aegis.png"
+
 export default {
   name: "MyWorks",
   mounted() {
@@ -249,13 +253,36 @@ export default {
               {id: 'iq5', img: iq5},
             ],
             date: new Date(2021, 10, 5),
-            significance: 99,
+            significance: 98,
             category: 1,
             show: false,
             showOverlay: false,
             links: [
               {title: "IQ180 Game", url: "https://iq180.netlify.app"},
               {title: "Source Code", url: "https://github.com/180IQ-Netcentric/iq180-frontend-migrated"},
+            ]
+          },
+          {
+            title: "⭐ Aegis Healthcare Application",
+            skill: ["React Native", "TypeScript", "SDLC", "UI/UX Design"],
+            description: "An Android application for facilitating the elderly caretaking process.",
+            fullDescription: "Aegis application aims to make elderly caretaking a more streamlined process throught the easy-to-use application with customizable functionalities to suit the elderlies' needs such as: reminder, emergency reporting, health recording, and memory recall game. The 12-person team adopted a full Agile and Scrum process throughout the development of this project.This project is a part of the Software Engineering, ICE Capstone, and Database Management courses of Chula ISE. The application is live on the Google Play Store.",
+            img: Aegis,
+            imgs: [
+              {id: 'aegis1', img: "https://play-lh.googleusercontent.com/dlZ93Yq_8SZtixYIxu0YfRhFYhrS6uiFRaZZkOvWyjRxYkcv8wEpr5PwPktkifJvCyI=w2560-h1440-rw"},
+              {id: 'aegis2', img: "https://play-lh.googleusercontent.com/Am7CSFc9CRtiNiVCLbkhwgsQbO62H1hhyZ2-l81c8dLCnIkUlKPF5yP8RI9CSqkDCvwZ=w2560-h1440-rw"},
+              {id: 'aegis3', img: "https://play-lh.googleusercontent.com/VAmXMCvrQ0Q9mNuW5btKaX04jFXr9hRfhK_1BCr34-sDbnlxNHrhyaBukkufqnFE5R1U=w2560-h1440-rw"},
+              {id: 'aegis4', img: "https://play-lh.googleusercontent.com/kYBQZIv_ufTPVwgknTh91U1K9lFqTwVTFFJlPEQbP8E_geV1igOBQ4vuC_SbogTcYXk=w2560-h1440-rw"},
+              {id: 'aegis5', img: "https://play-lh.googleusercontent.com/21-LzpbFOPmz0VpHhZJcqF3Chve2QBNcNV_06Hd7AciMFKSyFQjDsRrxm8uLRI24AQ=w2560-h1440-rw"},
+              {id: 'aegis6', img: "https://play-lh.googleusercontent.com/9juVShNG0NJiwGYgUn_skMAqs6j9OLnt7xh9FPiatXWz9tJojxPXlzvR2fwe-DdOU6U=w2560-h1440-rw"},
+            ],
+            date: new Date(2022, 5, 7),
+            significance: 99,
+            category: 1,
+            show: false,
+            showOverlay: false,
+            links: [
+              {title: "Google Play Store", url: "https://play.google.com/store/apps/details?id=com.aegishealthappfrontend"},
             ]
           },
         ]
@@ -281,7 +308,7 @@ export default {
               
             ],
             date: new Date(2020, 8, 1),
-            significance: 98,
+            significance: 96,
             category: 2,
             show: false,
             showOverlay: false,
@@ -466,6 +493,22 @@ export default {
       internship: {
         categoryTitle: "Internship",
         projects: [
+          {
+            title: "⭐ [EMIT Intern] ExxonMobil IT Supply Chemical Modern Apps Developer",
+            skill: ["Full-stack Development", ".NET", "C#", "Azure"],
+            description: "[Internship in progress]",
+            fullDescription: "To be updated. Stay tuned!",
+            img: Emit,
+            imgs: [
+              {id: 'ExxonMobil IT Intern', src: Emit}
+            ],
+            date: new Date(2022, 6, 1),
+            significance: 100,
+            category: 6,
+            show: false,
+            showOverlay: false,
+            links: []
+          },
           {
             title: "⭐ [LINE ROOKIE] Front-end Developer Intern",
             skill: ["LINE Thailand", "Front-end Development", "Back-end Development", "Web Development", "Vue", "Go", "Typescript"],

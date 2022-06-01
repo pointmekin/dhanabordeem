@@ -18,8 +18,8 @@
               <div class="wrapper">
                 <div class="static-txt">I'm a</div>
                 <ul :class="isDarkTheme ? 'dark' : 'light'" class="dynamic-txts">
-                  <li><span>Front-end Developer &nbsp;</span></li>
-                  <li><span>Front-end Developer &nbsp;</span></li>
+                  <li><span>Full-stack Developer &nbsp;</span></li>
+                  <li><span>Full-stack Developer &nbsp;</span></li>
                   <li><span>UI / UX Designer    &nbsp;</span></li>
                   <li><span>UI / UX Designer    &nbsp;</span></li>
                   
@@ -47,6 +47,8 @@
             <div class="links">
               Download my 
               <a href="https://drive.google.com/drive/folders/1TTybFkX_Qt7DNtaTC23M1RgtcHTRQpU3?usp=sharing" target="_blank">Resume</a>
+              and 
+              <a href="https://drive.google.com/file/d/1p6wHk6GSoPZRxnfn4m0Y2wMiCVsKfdgS/view?usp=sharing" target="_blank">CV</a>
             </div>
             <hr class="mt-5 mb-3"/>
           </div>
@@ -153,7 +155,7 @@ export default {
     return {
       greetings: "Greetings, my name is ",
       show: false,
-      technicalSkills: ["Front-end Development", "UI/UX Designing", "Photo and Video Editting", "Graphic Designing"],
+      technicalSkills: ["Full-stack Development", "UI/UX Designing", "Photo and Video Editting", "Graphic Designing"],
       softSkills: ["Critical-thinker", "Effective Communicator", "Presentation and Public Speaking", "Collaborative Worker", "Tech Savvy"],
       // isDarkTheme: this.getCookie("isDarkTheme"),
    }
