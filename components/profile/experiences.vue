@@ -18,9 +18,12 @@
           <div class="experience-content default-card default-shadow">
             <div class="d-flex justify-space-between">
               <v-card-title>{{ experience.title }}</v-card-title>
-              <p class="mt-5 mr-3">{{ experience.date }}</p>
+              <div class="ml-5 mr-3 mt-5" >
+                <img class="d-flex float-right institution-logo" :src="experience.img"  alt="">
+              </div>
             </div>
-            <v-card-subtitle class="experience-subtitle">{{ experience.subtitle }}</v-card-subtitle>
+            <v-card-text class="experience-subtitle">{{ experience.subtitle }}</v-card-text>
+            <v-card-subtitle>{{ experience.date }}</v-card-subtitle>
             <v-card-text class="experience-description">{{ experience.description }}</v-card-text>
           </div>
         </v-col>
@@ -30,28 +33,51 @@
 </template>
 
 <script>
+import CUSCLogo from "../../assets/Experiences/CUSCLogo.png"
+import ExxonMobilLogo from "../../assets/Experiences/ExxonMobilLogo.png"
+import LineLogo from "../../assets/Experiences/LineLogo.jpeg"
+import OpenlinkLogo from "../../assets/Experiences/OpenlinkLogo.png"
+import PlanItLogo from "../../assets/Experiences/PlanItLogo.svg"
+
 export default {
   name: "Experiences",
   data() {
     return {
       experiences: [
         {
+          title: "Full-stack Developer Intern",
+          date: "2022",
+          subtitle: "ExxonMobil Limited",
+          description: "Full-stack developer intern in the Supply Modern Apps team under the Chemical IT, Supply Chain function. In the Supply Modern Apps team, I write software that facilitates the flow of information between the ExxonMobil business partners and the the SAP system behind the scenes using front-end, back-end, and cloud technology using the Agile methodology for the software development process.",
+          img: ExxonMobilLogo
+        },
+        {
           title: "Front-end Developer Intern",
           date: "2021",
           subtitle: "LINE Company Thailand",
-          description: "Completed LINE ROOKIE summer internship program, developing and maintaining the LINE SHOPPING web application."
+          description: "Completed LINE ROOKIE summer internship program, developing and maintaining the LINE SHOPPING web application.",
+          img: LineLogo
         },
         {
-          title: "Part-time Front-end Developer",
+          title: "Full-stack Developer (Part-time)",
+          date: "2022",
+          subtitle: "Openlink",
+          description: "Develops and maintains openlink.co as a fll-stack developer. Openlink is a one-stop platform to combine social links and content into a single mini-website. Developed and maintain the openlink platform as a full-stack developer using React, JavaScript, and PHP.",
+          img: OpenlinkLogo
+        },
+        {
+          title: "Front-end Developer (Part-time)",
           date: "2021",
           subtitle: "PlanIT Trip Planner",
-          description: "Develops and maintains planittripplanner.com as a front-end developer."
+          description: "Develops and maintains planittripplanner.com as a front-end developer.",
+          img: PlanItLogo
         },
         {
           title: "Front-end Developer Lead and UI/UX Designer Lead",
           date: "2020",
           subtitle: "Chulalongkorn University Sports Center Booking",
-          description: "Lead the team of front-end developers and UI/UX designers in designing and developing a sports center reservation for Chulalongkorn University Sports Center in the namne of Thinc Club."
+          description: "Lead the team of front-end developers and UI/UX designers in designing and developing a sports center reservation for Chulalongkorn University Sports Center in the namne of Thinc Club.",
+          img: CUSCLogo
         },
       ]
     };
@@ -90,33 +116,12 @@ export default {
     ". description description ."
     ". section section .";
 }
-
-.sidebar {
-  margin-top: 20px;
-  margin-left: 10rem;
-  overflow: hidden;
-  height: 520px;
-  position: relative;
+.institution-logo {
+  height: 50px;
+  max-width: 100px;
+  object-fit: contain;
 }
 
-.sidebar img {
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-
-/* .profile-img {
-  -webkit-box-shadow: 6px 34px 55px -11px rgba(189, 189, 189, 1);
-  -moz-box-shadow: 6px 34px 55px -11px rgba(189, 189, 189, 1);
-  box-shadow: 6px 34px 55px -11px rgba(189, 189, 189, 1);
-} */
-
-
-.item {
-  box-sizing: border-box;
-  width: 50%;
-  margin-bottom: 18px;
-  padding: 0px 11px;
-}
 
 .experience-content {
   font-weight: 600;
@@ -135,26 +140,12 @@ export default {
   font-size: 1rem !important;
 }
 
-.align-date {
-  text-align: right !important;
-}
-
 .experience-subtitle {
   margin-top: -20px;
-  margin-bottom: 15px;
+  margin-bottom: -15px
 }
 
 @media screen and (max-width: 780px) {
-  .sidebar {
-    margin-top: 10px;
-    height: 250px;
-    margin-left: 0px;
-  }
-
-  .sidebar img {
-    margin-top: -5%;
-  }
-
   .container {
     display: grid;
     grid-template-columns: 5% 90% 0% 0% !important;

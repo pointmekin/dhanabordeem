@@ -79,6 +79,10 @@ import Emit from "../../assets/projects/EMIT/EMIT.png"
 
 import Aegis from "../../assets/projects/Aegis/Aegis.png"
 
+import GameTheoryCover from "../../assets/projects/NTU/GameTheoryCover.png"
+import IntroToFintechCover from "../../assets/projects/NTU/IntroToFintechCover.png"
+import TimeSeriesCover from "../../assets/projects/NTU/TimeSeriesCover.png"
+
 export default {
   name: "MyWorks",
   mounted() {
@@ -88,7 +92,7 @@ export default {
     return {
       renderComponent: true,
       screenWidth: null,
-      items: ['All', 'Web Development', 'Mobile Development', 'UI/UX Design', 'Photo & Video', 'Graphics Design', 'Internship'],
+      items: ['All', 'Web Development', 'Mobile Development', 'UI/UX Design', 'Photo & Video', 'Graphics Design', 'Internship', 'Academic'],
       sortby: 0,
       category: 0,
       sortedList: [],
@@ -147,7 +151,7 @@ export default {
               {id: 'SelfManager2', img: SelfManager2},
             ],
             date: new Date(2021, 2, 1),
-            significance: 86,
+            significance: 70,
             category: 1,
             show: false,
             showOverlay: false,
@@ -210,7 +214,7 @@ export default {
               {id: 'Todoist1', img: Todoist1},
             ],
             date: new Date(2021, 0, 1),
-            significance: 94,
+            significance: 75,
             category: 1,
             show: false,
             showOverlay: false,
@@ -231,7 +235,7 @@ export default {
               {id: 'GoldQR', img: GoldQR},
             ],
             date: new Date(2021, 2, 1),
-            significance: 94,
+            significance: 75,
             category: 1,
             show: false,
             showOverlay: false,
@@ -328,7 +332,7 @@ export default {
               
             ],
             date: new Date(2020, 8, 1),
-            significance: 82,
+            significance: 60,
             category: 2,
             show: false,
             showOverlay: false,
@@ -349,7 +353,7 @@ export default {
               
             ],
             date: new Date(2020, 8, 1),
-            significance: 83,
+            significance: 60,
             category: 2,
             show: false,
             showOverlay: false,
@@ -370,7 +374,7 @@ export default {
               
             ],
             date: new Date(2020, 8, 1),
-            significance: 84,
+            significance: 70,
             category: 2,
             show: false,
             showOverlay: false,
@@ -439,7 +443,7 @@ export default {
               {id: 'Sportini', img: Sportini}
             ],
             date: new Date(2021, 5, 3),
-            significance: 95,
+            significance: 80,
             category: 4,
             show: false,
             showOverlay: false,
@@ -457,7 +461,7 @@ export default {
               {id: 'PageRank', img: PageRank}
             ],
             date: new Date(2019, 2, 3),
-            significance: 85,
+            significance: 65,
             category: 4,
             show: false,
             showOverlay: false,
@@ -480,7 +484,7 @@ export default {
               {id: 'Point', src: Point}
             ],
             date: new Date(2020, 1, 2),
-            significance: 70,
+            significance: 50,
             category: 5,
             show: false,
             showOverlay: false,
@@ -507,7 +511,9 @@ export default {
             category: 6,
             show: false,
             showOverlay: false,
-            links: []
+            links: [
+              {title: "Internship Experience Blog", url: "https://dhanabordee.notion.site/MD4-261102d8338748f7ac0b190885354b92"},
+            ]
           },
           {
             title: "⭐ [LINE ROOKIE] Front-end Developer Intern",
@@ -564,6 +570,61 @@ export default {
             ]
           },
         ]
+      },
+      academic: {
+        categoryTitle: "Academic",
+        projects: [
+          {
+            title: "NTU Exchange 🇹🇼 - Game Theory with Applications",
+            skill: ["Game Theory"],
+            description: "Analysis on a report titled 'Technology Improvement Strategy for Green Products Under Competition: The Role of Government Subsidy' from the game-theoric point of view.",
+            fullDescription: "Analysis on a report titled 'Technology Improvement Strategy for Green Products Under Competition: The Role of Government Subsidy' from the game-theoric point of view. This is part of the Game Theory wiht Applications course at National Taiwan University that I have taken during my exchange period.",
+            img: GameTheoryCover,
+            imgs: [],
+            date: new Date(2022, 24, 12),
+            significance: 90,
+            category: 7,
+            show: false,
+            showOverlay: false,
+            links: [
+              {title: "Report", url: "https://drive.google.com/file/d/1z-sCv7w_fnRDAONEUhEtOzlkSNPfjJND/view?usp=share_link"},    
+              {title: "Presentation Video", url: "https://www.youtube.com/watch?v=kzMs76MmzFY"},
+            ]
+          },
+          {
+            title: "NTU Exchange 🇹🇼 - Time Series Analytics",
+            skill: ["Time Series Analytics", "Pyton", "R"],
+            description: "Time series analysis of Changi Airport travel passenger count data.",
+            fullDescription: "Applied time-series analytics methodology to analyze the Changi Airport travel passenger count data using the univariate SARIMA modelt to fit and make a forecast of the passenger count.",
+            img: TimeSeriesCover,
+            imgs: [],
+            date: new Date(2022, 24, 12),
+            significance: 90,
+            category: 7,
+            show: false,
+            showOverlay: false,
+            links: [
+              {title: "Report", url: "https://drive.google.com/file/d/1NcCZfEGNNaXTjyHbUrlD8heAtCXth8Pp/view?usp=share_link"}
+            ]
+          },
+          {
+            title: "NTU Exchange 🇹🇼 - Intro to Fintech",
+            skill: ["Web3 Security", "Blockchain", "Fintech"],
+            description: "Intro to Fintech Final Report and Prersentation: Web3Security - A Case of Celsius Network",
+            fullDescription: "This report will examine the importance of web3 security through the perspective of Celsius Network, the crisis it has experienced in the past years, and the major losses it experienced that eventually led to the downfall of the platform.",
+            img: IntroToFintechCover,
+            imgs: [],
+            date: new Date(2022, 24, 12),
+            significance: 98,
+            category: 7,
+            show: false,
+            showOverlay: false,
+            links: [
+              {title: "Report", url: "https://drive.google.com/file/d/1T8RYWdAarABuixe2ZJK-N_iGDmwpy5l_/view?usp=share_link"},
+              {title: "Presentation Video", url: "https://www.youtube.com/watch?v=MDKQlh-NbJ4"},
+            ]
+          }
+        ]
       }
     }
   },
@@ -601,6 +662,7 @@ export default {
       theList.push(...this.photoAndVideo.projects)
       theList.push(...this.graphicsDesigning.projects)
       theList.push(...this.internship.projects)
+      theList.push(...this.academic.projects)
       if (this.category !== 0) {
         this.sortedList = theList.filter((item) => item.category === this.category)
         console.log(...this.sortedList)

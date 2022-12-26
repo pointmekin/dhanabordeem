@@ -36,8 +36,9 @@
 
 <script>
 
-import ChulaLogo from "../../assets/ChulaLogo.png"
-import EISLogo from "../../assets/EISLogo.png"
+import ChulaLogo from "../../assets/Education/ChulaLogo.png"
+import EISLogo from "../../assets/Education/EISLogo.png"
+import NtuLogo from "../../assets/Education/NtuLogo.png"
 
 export default {
   name: "Education",
@@ -50,6 +51,13 @@ export default {
           subtitle: "Bachelor of Engineering, majoring in Information and Communication Engineering (International Program)",
           description: "Cumulative GPA: 3.74 (As of Semester 4, 2021). Awarded with 50% ISE Scholarship",
           img: ChulaLogo
+        },
+        {
+          title: "National Taiwan University",
+          date: "September 2022 - December 2022",
+          subtitle: "Bachelor of Engineering, Electrical Engineering and Computerr Science Department",
+          description: "Outbound exchange program between Chulalongkorn University and National Taiwan Univerrsity during semester 1 of my 4th year.",
+          img: NtuLogo
         },
         {
           title: "Ekamai International School",

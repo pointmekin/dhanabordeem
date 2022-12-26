@@ -16,6 +16,10 @@
       <div>
         <Education />
       </div>
+      <div class="section section-divider arrow-container"></div>
+      <div>
+        <Certifications />
+      </div>
 
 
       <div class="section section-divider arrow-container"></div>
@@ -31,13 +35,14 @@ import Background from "../../layouts/background"
 import AboutMe from "../../components/profile/aboutMe"
 import Experiences from "../../components/profile/experiences"
 import Education from "../../components/profile/education"
-import Skills from "../../components/profile/certifications"
+import Skills from "../../components/profile/skills"
+import Certifications from "../../components/profile/certifications"
 import Footer from "../../layouts/footer"
 import { defaultMeta } from '~/components/meta'
 
 export default {
   components: {
-    Background, AboutMe, Experiences, Education, Skills, Footer
+    Background, AboutMe, Experiences, Education, Skills, Certifications, Footer
   },
   head: {
     title: "Dhanabordee's Portfolio",
@@ -51,7 +56,7 @@ export default {
 <style scoped>
 
 .section-divider {
-  height: 100px;
+  height: 20px;
 }
 
 .content {
@@ -64,24 +69,8 @@ export default {
   flex-direction: column;
 }
 
-.item-a {
-  grid-area: header;
-}
-.main{
-  grid-area: main;
-}
-.sidebar {
-  grid-area: sidebar;
-}
-.item-d {
-  grid-area: footer;
-}
-
 .section {
   grid-area: section;
 }
-
-
-
 
 </style>
