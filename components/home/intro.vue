@@ -48,7 +48,7 @@
               Download my 
               <a href="https://drive.google.com/drive/folders/1TTybFkX_Qt7DNtaTC23M1RgtcHTRQpU3?usp=sharing" target="_blank">Resume</a>
               and 
-              <a href="https://drive.google.com/file/d/1p6wHk6GSoPZRxnfn4m0Y2wMiCVsKfdgS/view?usp=sharing" target="_blank">CV</a>
+              <a href="https://drive.google.com/drive/folders/1aOLWwlnKE9PGWY1gIVLAqfuvQ7D1LVAu?usp=sharing" target="_blank">CV</a>
             </div>
             <hr class="mt-5 mb-3"/>
           </div>

@@ -5,7 +5,7 @@ export const defaultMeta = [
     hid: "og:url",
     property: "og:url",
     name: "og:url",
-    content: "https://dhanabordeem.netlify.app"
+    content: "https://dhanabordeem.site"
   },
   {
     hid: "og:title",

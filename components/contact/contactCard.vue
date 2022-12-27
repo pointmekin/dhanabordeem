@@ -73,7 +73,7 @@
                 required
                 name="message"
               ></v-text-field>
-              <input type="hidden" name="_next" value="https://dhanabordeem.netlify.app/thankyou">
+              <input type="hidden" name="_next" value="https://dhanabordeem.site/thankyou">
               <v-btn color="blue" dark elevation="0" class="d-flex float-right" type="submit">Send</v-btn>
           </form>
         </div>

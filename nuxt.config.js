@@ -83,7 +83,7 @@ export default {
       }
     }
   },
-  publicRuntimeConfig: { baseURL: "https://dhanabordeem.netlify.app" },
+  publicRuntimeConfig: { baseURL: "https://dhanabordeem.site" },
   hooks: {
     'generate:page': page => {
       page.html = page.html.replace(/ data-n-head=".*?"/gi, '').replace(/ data-hid=".*?"/gi, '')
